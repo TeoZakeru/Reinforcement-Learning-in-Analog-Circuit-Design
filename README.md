@@ -15,8 +15,8 @@ All SPICE simulations are **precomputed** and stored in a lookup table for fast 
 ```plaintext
 .
 ├── environ.py                                                 # Custom Gymnasium-compatible RL environment
-├── train_a2c.py                                                # Evaluation script for A2C-trained agent
-├── train_ppo.py                                                # Evaluation script for PPO-trained agent
+├── train_a2c.py                                               # Evaluation script for A2C-trained agent
+├── train_ppo.py                                               # Evaluation script for PPO-trained agent
 ├── test_a2c.py                                                # Evaluation script for A2C-trained agent
 ├── test_ppo.py                                                # Evaluation script for PPO-trained agent
 ├── merged_simulation_results_0_159999_full.csv                # Precomputed SPICE results (160,000 configs)
@@ -47,7 +47,7 @@ All SPICE simulations are **precomputed** and stored in a lookup table for fast 
 
 ### 2. Simulation Data
 
-- `full.csv` contains SPICE simulation results for all 160,000 configurations.
+- `merged_simulation_results_0_159999_full.csv` contains SPICE simulation results for all 160,000 configurations.
 - During training, these are indexed using an in-memory Python dictionary for **O(1)** lookup.
 
 ---
