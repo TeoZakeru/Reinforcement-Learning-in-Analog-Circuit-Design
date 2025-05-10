@@ -14,16 +14,16 @@ All SPICE simulations are **precomputed** and stored in a lookup table for fast 
 
 ```plaintext
 .
-├── environ.py              # Custom Gymnasium-compatible RL environment
-├── test_a2c.py             # Evaluation script for A2C-trained agent
-├── test_ppo.py             # Evaluation script for PPO-trained agent
-├── full.csv                # Precomputed SPICE results (160,000 configs)
-├── utils/                  # (Optional) Utility modules and helper functions
-├── models/                 # Directory to store trained RL models
-│   ├── best_rl_model_a2c.zip
-│   └── best_rl_model_ppo.zip
-├── README.md               # This file
-└── requirements.txt        # Python dependencies
+├── environ.py                                                 # Custom Gymnasium-compatible RL environment
+├── train_a2c.py                                                # Evaluation script for A2C-trained agent
+├── train_ppo.py                                                # Evaluation script for PPO-trained agent
+├── test_a2c.py                                                # Evaluation script for A2C-trained agent
+├── test_ppo.py                                                # Evaluation script for PPO-trained agent
+├── merged_simulation_results_0_159999_full.csv                # Precomputed SPICE results (160,000 configs)
+├── best_rl_model_a2c.zip                                      # Best Trained A2C Model
+├── best_rl_model_ppo.zip                                      # Best Trained PPO Model
+├── README.md                                                  # This file
+└── requirements.txt                                           # Python dependencies
 ```
 
 ---
