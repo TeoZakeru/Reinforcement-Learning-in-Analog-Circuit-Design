@@ -52,18 +52,6 @@ All SPICE simulations are **precomputed** and stored in a lookup table for fast 
 
 ---
 
-## 🧠 Algorithms Used
-
-### ✅ PPO (Proximal Policy Optimization)
-- More stable and robust
-- Better reward convergence
-- Balances power and accuracy effectively
-
-### 🚫 A2C (Advantage Actor-Critic)
-- Achieves lower power but fails to meet voltage accuracy targets (1.9V error)
-
----
-
 ## 🔧 How to Run
 
 ### 1. Install Dependencies
@@ -89,6 +77,7 @@ python train_a2c.py    # Optional - for A2C
 python train_ppo.py    # Optional - for PPO
 ```
 
+
 ### 3. Evaluate Trained Models
 
 ```bash
@@ -98,23 +87,10 @@ python test_ppo.py     # Runs PPO policy and logs performance
 
 ---
 
-## 📊 Results Summary
-
-| Metric                  | PPO         | A2C         |
-|------------------------|-------------|-------------|
-| Power Consumption       | 195 pW      | 35 pW       |
-| Output Voltage Error    | 176 mV      | 1.9 V ❌     |
-| Reward                  | -70.09      | -82.03      |
-| Training Steps          | ~245k       | ~118k       |
-| Functionality           | ✅ Stable   | ❌ Fails     |
-
----
-
 ## 📌 Key Highlights
 
 - Fast training via SPICE result caching
 - Discrete MDP modeling for analog design
-- Better design quality using PPO over A2C
 - Reproducible results using fixed random seed
 
 ---
@@ -125,15 +101,6 @@ python test_ppo.py     # Runs PPO policy and logs performance
 - [Stable Baselines3](https://github.com/DLR-RM/stable-baselines3)
 - [LTspice Simulator](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
 - Razavi, B. "Design of Analog CMOS Integrated Circuits"
-
----
-
-## 🛠 Future Work
-
-- Support for multi-objective reward functions (area, noise, etc.)
-- Transient performance integration
-- Exploration of alternative LDO architectures
-- Finer-grained width and topology options
 
 ---
 
